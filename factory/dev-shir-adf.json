@@ -1,0 +1,9 @@
+{
+	"name": "dev-shir-adf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ee2137eb-a527-4c83-8569-db17f330086c",
+		"tenantId": "e4e34038-ea1f-4882-b6e8-ccd776459ca0"
+	}
+}
