@@ -1,0 +1,12 @@
+{
+	"name": "integrationRuntime1",
+	"properties": {
+		"type": "SelfHosted",
+		"typeProperties": {
+			"linkedInfo": {
+				"resourceId": "/subscriptions/0d3ce63c-abaa-48ae-bbe1-f582cea576b9/resourcegroups/SHIR-POC/providers/Microsoft.DataFactory/factories/dev-shir-adf/integrationruntimes/integrationRuntime1",
+				"authorizationType": "Rbac"
+			}
+		}
+	}
+}
