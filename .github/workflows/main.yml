@@ -21,12 +21,12 @@ jobs:
       working-directory: ${{github.workspace}}/
       
     - name: Validate
-      run: npm run build validate ${{github.workspace}}/ /subscriptions/0d3ce63c-abaa-48ae-bbe1-f582cea576b9/resourceGroups/SHIR-POC/providers/Microsoft.DataFactory/factories/dev-shir-adf
+      run: npm run build validate ${{github.workspace}}/ /subscriptions/0d3ce63c-abaa-48ae-bbe1-f582cea576b9/resourceGroups/SHIR-POC/providers/Microsoft.DataFactory/factories/test-shir-poc
       working-directory: ${{github.workspace}}/
 
  
     - name: Validate and Generate ARM template
-      run: npm run build export ${{github.workspace}}/ /subscriptions/0d3ce63c-abaa-48ae-bbe1-f582cea576b9/resourceGroups/SHIR-POC/providers/Microsoft.DataFactory/factories/dev-shir-adf "ExportedArmTemplate" 
+      run: npm run build export ${{github.workspace}}/ /subscriptions/0d3ce63c-abaa-48ae-bbe1-f582cea576b9/resourceGroups/SHIR-POC/providers/Microsoft.DataFactory/factories/test-shir-poc "ExportedArmTemplate" 
       working-directory: ${{github.workspace}}/
 
     - name: upload artifact
