@@ -12,6 +12,12 @@
 				}
 			}
 		],
+		"parameters": {
+			"Exp": {
+				"type": "string",
+				"defaultValue": "3"
+			}
+		},
 		"annotations": []
 	}
 }
