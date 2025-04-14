@@ -1,9 +1,0 @@
-{
-	"name": "test-shir-poc",
-	"location": "eastus",
-	"identity": {
-		"type": "SystemAssigned",
-		"principalId": "f84d36bd-5058-4f83-92c0-d8270cf02d28",
-		"tenantId": "e4e34038-ea1f-4882-b6e8-ccd776459ca0"
-	}
-}
