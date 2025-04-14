@@ -1,0 +1,9 @@
+{
+	"name": "mayurr-poc-adf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ee925b76-c538-49bd-8fa8-f117465ba3f0",
+		"tenantId": "e4e34038-ea1f-4882-b6e8-ccd776459ca0"
+	}
+}
