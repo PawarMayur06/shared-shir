@@ -1,4 +1,4 @@
-name: Dev to Prod
+name: Dev git mode to Dev live mode
  
 on:
   workflow_dispatch:
@@ -21,12 +21,12 @@ jobs:
       working-directory: ${{github.workspace}}/
       
     - name: Validate
-      run: npm run build validate ${{github.workspace}}/ /subscriptions/0d3ce63c-abaa-48ae-bbe1-f582cea576b9/resourceGroups/SHIR-POC/providers/Microsoft.DataFactory/factories/test-shir-poc
+      run: npm run build validate ${{github.workspace}}/ //subscriptions/7133afd3-c71c-4f13-9320-ab6f3543c8c2/resourceGroups/mayurr-poc/providers/Microsoft.DataFactory/factories/mayurr-poc-adf
       working-directory: ${{github.workspace}}/
 
  
     - name: Validate and Generate ARM template
-      run: npm run build export ${{github.workspace}}/ /subscriptions/0d3ce63c-abaa-48ae-bbe1-f582cea576b9/resourceGroups/SHIR-POC/providers/Microsoft.DataFactory/factories/test-shir-poc "ExportedArmTemplate" 
+      run: npm run build export ${{github.workspace}}/ /subscriptions/7133afd3-c71c-4f13-9320-ab6f3543c8c2/resourceGroups/mayurr-poc/providers/Microsoft.DataFactory/factories/mayurr-poc-adf "ExportedArmTemplate" 
       working-directory: ${{github.workspace}}/
 
     - name: upload artifact
@@ -54,8 +54,7 @@ jobs:
       - name: data-factory-deploy
         uses: Azure/data-factory-deploy-action@v1.2.0
         with:
-          resourceGroupName: SHIR-POC
-          dataFactoryName: prod-shir-adf
+          resourceGroupName: mayurr-poc
+          dataFactoryName: mayurr-poc-adf
           armTemplateFile: ARMTemplateForFactory.json
           armTemplateParametersFile: ARMTemplateParametersForFactory.json
-          # additionalParameters: 'AzureKeyVault1_properties_typeProperties_baseUrl=https://mayurrprodadfkv.vault.azure.net/ default_properties_name_value=Dinesh'
